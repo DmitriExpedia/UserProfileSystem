@@ -1,0 +1,11 @@
+<h3>Skills</h3>
+<hr>
+<div ng-repeat="skill in allSkills" class="pull-left"
+	data-toggle="tooltip" data-placement="bottom"
+	title="{{skill.doc_count}} Employees are aware of it">
+	&nbsp; <a
+		href="searchSkilledEmployee.html#?requiredSkill={{skill.key}}"
+		class="btn btn-info" role="button"
+		style="font-size: {{calculateSkillFontSize(skill.doc_count)}}">{{skill.key}}</a>
+
+</div>

@@ -1,0 +1,29 @@
+<h3>Users</h3>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th ng-hide="readOnly">Edit</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email</th>
+			<th>Phone</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="employee in employees">
+			<td ng-hide="readOnly">
+				<button class="btn" ng-click="editEmployee(employee._id)">
+					<span class="glyphicon glyphicon-pencil"></span> Edit
+				</button>
+				<button class="btn" ng-click="expandKnowledge(employee._id)">
+					<span class="glyphicon glyphicon-expand"></span> View knowledge
+				</button>
+			</td>
+			<td>{{ employee._source.firstName }}</td>
+			<td>{{ employee._source.lastName }}</td>
+			<td>{{ employee._source.email }}</td>
+			<td>{{ employee._source.phone }}</td>
+		</tr>
+	</tbody>
+</table>
