@@ -1,5 +1,4 @@
 # UserProfileSystem
 angularjs + bootstrap
 
-*df
-*sdf
+![General Flow](/ups/docs/GeneralFlow.png?raw=true "General Flow")
