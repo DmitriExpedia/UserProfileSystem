@@ -11,6 +11,7 @@ angular
 								ElasticSearchDatasource) {
 
 							$scope.datasource = ElasticSearchDatasource;
+							$scope.employeePage = true;
 
 							$scope.searchAllEmployee = function() {
 								$scope.datasource.searchAllEmployee($scope);

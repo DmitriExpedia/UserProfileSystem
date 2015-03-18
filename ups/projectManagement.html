@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>User Profile System</title>
+
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body ng-app="">
+
+	<div ng-include src="'parts/navBar.html'"></div>
+
+	<div class="container-fluid">
+		<div class="row">
+			{{projectManagementPage = true}}
+			<div ng-include src="'parts/menu.html'"></div>
+
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<h1 class="page-header">EPS project</h1>
+
+
+				<ol class="breadcrumb">
+					<li class="active">Inception</li>
+					<li><a href="#">Implementation</a></li>
+					<li><a href="#">Rollout</a></li>
+				</ol>
+
+				<hr>
+
+				<form class="form-horizontal">
+					<div class="checkbox">
+						<label><input type="checkbox" ng-model="githubRepoExists">Set
+							up GitHub Repo</label>
+					</div>
+					<div class="form-group" ng-show="githubRepoExists">
+						<label class="col-sm-2 control-label">GitHub Repo URL:</label>
+						<div class="col-sm-10">
+							<input type="text" ng-model="gitHubRepoUrl" placeholder="">
+						</div>
+					</div>
+					
+					
+
+					<div class="checkbox">
+						<label><input type="checkbox"
+							ng-model="qaBoxesProvisioned">Provision QA boxes</label>
+					</div>
+					<div class="form-group" ng-show="qaBoxesProvisioned">
+						<label class="col-sm-2 control-label">QA boxes:</label>
+						<div class="col-sm-10">
+							<input type="text" ng-model="qaBoxesUrl" placeholder="">
+						</div>
+					</div>
+					
+					
+					<div class="checkbox">
+						<label><input type="checkbox" ng-model="cicdPipelineSetUp">Set
+							up QA CI/CD pipeline</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox"
+							ng-model="ticketForE2EBoxesExists">Determine Required
+							Resources and fill a ticket for E2E</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox"
+							ng-model="ticketForProdBoxesExists">Determine Required
+							Resources and fill a ticket for PROD</label>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>

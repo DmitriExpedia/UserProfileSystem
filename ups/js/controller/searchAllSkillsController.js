@@ -7,6 +7,7 @@ angular.module('ups').controller(
 					$scope.datasource = ElasticSearchDatasource;
 					$scope.readOnly = true;
 					$scope.allSkills = []
+					$scope.allSkillsPage = true;
 
 					$scope.searchAllSkills = function() {
 						$scope.datasource.searchAllSkills($scope)

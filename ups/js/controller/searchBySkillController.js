@@ -9,6 +9,7 @@ angular.module('ups').controller(
 					$scope.employees = [];
 					$scope.readOnly = true;
 					$scope.requiredSkill = $location.search().requiredSkill;
+					$scope.searchSkilledEmployeePage = true;
 
 					$scope.searchEmployeeBySkill = function() {
 						$scope.datasource.searchEmployeeBySkill($scope,
